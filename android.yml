@@ -1,0 +1,27 @@
+name: Android build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["android/**"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Assemble
+        working-directory: android
+        run: |
+          chmod +x gradlew || true
+          gradle wrapper --gradle-version 8.7
+          ./gradlew assembleRelease --no-daemon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: neep-port-apk
+          path: android/app/build/outputs/**/*.apk
