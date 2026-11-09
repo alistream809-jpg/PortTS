@@ -1,0 +1,76 @@
+{
+  "generator": "NeepPort",
+  "generatedAt": "2026-11-09T18:03:05.373Z",
+  "game": {
+    "executable": "NexusHost-Setup-1.0.0.exe",
+    "sizeBytes": 35856095,
+    "architecture": "x86 (32-bit)",
+    "filesScanned": 1,
+    "totalBytes": 35856095
+  },
+  "engine": {
+    "id": "unreal",
+    "name": "Unreal Engine",
+    "version": null,
+    "confidence": 0.5900000000000001,
+    "evidence": [
+      "Binary contains “bUE5b”"
+    ],
+    "supportLevel": "partial"
+  },
+  "buildRoute": {
+    "androidPath": "Build from the .uproject with the Android toolchain (NDK r25+, ASTC/ETC2 textures) using UnrealBuildTool -platform Android.",
+    "requirements": [
+      "The .uproject source project and its Content/ folder",
+      "Unreal Engine source or the matching engine install with Android support",
+      "Android NDK, SDK and JDK versions supported by that engine release",
+      "Shader assets cooked for Android (ASTC/ETC2)"
+    ],
+    "entryPoint": null,
+    "nativeRuntime": [
+      "libUnreal.so",
+      "libUE4.so",
+      "libmain.so"
+    ]
+  },
+  "sizePlan": {
+    "mode": "optimized",
+    "originalBytes": 35856095,
+    "optimizedBytes": 35856095,
+    "plannedBytes": 35856095,
+    "floorBytes": 35856095,
+    "duplicates": {
+      "groups": 0,
+      "bytes": 0,
+      "samples": []
+    },
+    "unreferenced": {
+      "count": 0,
+      "bytes": 0,
+      "samples": [],
+      "scanned": 0
+    },
+    "groups": [
+      {
+        "key": "binaries",
+        "label": "Binaries & libraries",
+        "files": 1,
+        "bytes": 35856095,
+        "optional": false,
+        "reason": "Required for the game to run — never removed by NeepPort.",
+        "included": true,
+        "plannedBytes": 35856095
+      }
+    ],
+    "excludedGroups": []
+  },
+  "buildProfile": {
+    "outputDir": "C:\\NeepPort\\Output",
+    "tempDir": "C:\\NeepPort\\Temp",
+    "maxRamMb": 8192,
+    "cpuPreference": "balanced",
+    "gpuAcceleration": true,
+    "optimizationMode": "balanced",
+    "packageFormat": "apk"
+  }
+}
